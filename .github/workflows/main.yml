@@ -23,14 +23,14 @@ jobs:
       - name: SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
         with:
-          username: tester
-          server: staging.micro-courses.top
+          username: 'tester'
+          server: 'staging.micro-courses.top'
           port: 22 # default is 22
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh_private_key: ${{ secrets.INPUT_SSH_PRIVATE_KEY }}
  
           
           # will put all file under this path
-          local_path: ./* # default is ./*
+          local_path: './*'
           # files will copy to under remote_path
           remote_path: /home/tester/public_html
           
